@@ -7,12 +7,6 @@ import framework.DadosGlobais;
 
 public class JobDAO {
 	
-	/*private String title;
-	private String postDate;
-	private String role;
-	private String requirements;
-	private double rem;
-	private String companyName;*/
 	public boolean insertJob (Job job, int companyId){
 		String query = "INSERT INTO Job(company_idCompany, jobTitle, jobRole, jobRequierements, jobPostDate, jobRem) "
 				+ "VALUES (" + companyId + ", '" + job.getTitle() + ", '" + job.getRole() + ", '" + job.getRequirements()
