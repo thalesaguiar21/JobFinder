@@ -97,8 +97,10 @@ public class GUI {
 		JButton btnNewButton_1 = new JButton("Buscar Irregularidades - Bolsa Fam\u00EDlia");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DadosGlobais.getDados().setMatcher(EnumMatchers.V_B_FAMILIA);
-				attTextArea(DadosGlobais.getDados().getMatcher().allMatchs());
+				CompanyDAO compDao = new CompanyDAO();
+				Company fComp = compDao.getCompany("ExampleCompany");
+				//DadosGlobais.getDados().setMatcher(EnumMatchers.V_B_FAMILIA);
+				textArea.append("Nome: " + fComp.getName() + "\nEndereço: " + fComp.getAddress() + "\nDescrição: " + fComp.getDescription());
 			}
 		});
 		btnNewButton_1.setBounds(512, 13, 260, 25);
