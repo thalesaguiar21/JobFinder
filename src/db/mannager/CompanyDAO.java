@@ -7,20 +7,20 @@ import java.util.Map;
 import framework.DadosGlobais;
 
 public class CompanyDAO {
-	public boolean insertCompany (Company company){
+	public boolean insert (Company company){
 		String query = "INSERT INTO Company(companyName, companyAddress, companyDescription) "
 				+ "VALUES ('"+ company.getName() + "', '" + company.getAddress() + "', '" + company.getDescription() + "');";
 		DadosGlobais.getDados().getMyDb().update(query);
 		return true;
 	}
 
-	public boolean removeCompany (Company company) {
+	public boolean remove (Company company) {
 		String query = "DELETE FROM Company WHERE companyName = '" + company.getName() + "';";
 		DadosGlobais.getDados().getMyDb().update(query);
 		return true;
 	}
 
-	public Company getCompany (String companyName){
+	public Company get (String companyName){
 		Company foundCompany = new Company("", "", "", null);
 		String query = "SELECT * FROM Company WHERE companyName = '" + companyName + "' LIMIT 1;";
 		// Buscar a empresa
@@ -47,7 +47,7 @@ public class CompanyDAO {
 		return foundCompany;
 	}
 
-	public boolean updateCompany (Company olderCompany, Company newCompany) {
+	public boolean update (Company olderCompany, Company newCompany) {
 		String query = "UPDATE Company SET companyName = '" + newCompany.getName() + "', companyAddress = '"
 				+ newCompany.getAddress() + "', companyDescription = '" + newCompany.getDescription()
 				+ "' WHERE companyName = '" + olderCompany.getName() + "');";
