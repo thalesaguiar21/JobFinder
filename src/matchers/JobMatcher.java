@@ -12,7 +12,6 @@ public class JobMatcher implements Matcher{
 		
 	}
 	
-	@Override
 	public List<Job> allMatchs() {
 		/*List<Map<String, Object>> servIncoerentes = new ArrayList<Map<String, Object>>();
 		servIncoerentes = DadosGlobais.getDados().getMyDb().select("SELECT se.nome, se.cpf FROM BolsaFamilia bf, Servidor se\n" +
@@ -29,7 +28,6 @@ public class JobMatcher implements Matcher{
 		return jobOffers;
 	}
 
-	@Override
 	public List<Job> matchByName(String nome) {
 		List<Job> jobOffers = new ArrayList<Job>();
 		for(Job j : DadosGlobais.getDados().getServidoresPublicos()){
@@ -39,7 +37,6 @@ public class JobMatcher implements Matcher{
 		return jobOffers;
 	}
 
-	@Override
 	public List<Job> matchByNames(List<String> nomes) {
 		return null;
 	}
