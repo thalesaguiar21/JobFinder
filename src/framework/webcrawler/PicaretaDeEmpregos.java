@@ -9,7 +9,7 @@ import framework.webcrawler.Picareta;
 
 public class PicaretaDeEmpregos extends Picareta {
 
-	JobDAO jdao;
+	JobDAO jdao = new JobDAO();
 
 	PicaretaDeEmpregos(){
 		this.setBaseUrl("http://www.tribunadonorte.com.br/classificados/empregos");
@@ -28,7 +28,7 @@ public class PicaretaDeEmpregos extends Picareta {
 	    			new Job(e.select(".job-title").text(),
 	    					"", 
 	    					e.select(".job-description").text(), 
-	    					e.select(".job-code").text(),
+	    					"",
 	    					0), 0);
 	    }
 		return 1f;

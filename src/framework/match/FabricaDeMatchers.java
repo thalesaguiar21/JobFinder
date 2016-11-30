@@ -6,7 +6,7 @@ public class FabricaDeMatchers {
 	
 	public static Matcher criarMatcher(EnumMatchers type){
 		switch (type) {
-		case V_B_FAMILIA:
+		case V_JOB:
 			return new JobMatcher();
 		default:
 			System.out.println("Não existe um verificador para o numero " + type);

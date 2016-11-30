@@ -13,7 +13,7 @@ public class PostgreSQLJDBC extends DBManager{
 		JDBC_DRIVER = "org.postgresql.Driver";
 		DB_URL = "jdbc:postgresql://localhost:5432/JobFinderDB";
 		adm_user = "postgres";
-		adm_paswd = "admin";
+		adm_paswd = "concluido";
 		connection = null;
 		stmt = null;
 	}

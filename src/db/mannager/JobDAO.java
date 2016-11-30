@@ -9,8 +9,7 @@ public class JobDAO {
 	
 	public boolean insertJob (Job job, int companyId){
 		String query = "INSERT INTO Job(company_idCompany, jobTitle, jobRole, jobRequierements, jobPostDate, jobRem) "
-				+ "VALUES (" + companyId + ", '" + job.getTitle() + ", '" + job.getRole() + ", '" + job.getRequirements()
-				+ ", '" + job.getPostDate() + ", '" + job.getRem() + "');";
+				+ "VALUES (" + companyId + ", '" + job.getTitle() + "', '" + job.getRole() + "', '', '', '');";
 		DadosGlobais.getDados().getMyDb().update(query);
 		return true;
 	}
